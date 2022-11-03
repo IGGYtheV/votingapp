@@ -22,7 +22,7 @@ public class Item {
     @NotBlank(message = "description is mandatory")
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant_id")
     @OnDelete(action= OnDeleteAction.CASCADE)
     private Restaurant restaurant;
